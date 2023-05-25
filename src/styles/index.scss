@@ -8,4 +8,19 @@
    font-family: "Ubuntu-Regular", sans-serif;
    font-size: 16px;
 }
-
+#root{
+   height: 100vh;
+   background-color: $Magnolia;
+   padding-top: 20vh;
+}
+.container{
+   max-width: 840px;
+   padding: 0px 15px;
+   margin: 0 auto;
+}
+.App{
+   width: 100%;
+   padding: 10px;
+   background-color: $White;
+   border-radius: 8px;
+}
