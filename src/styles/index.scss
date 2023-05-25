@@ -1,5 +1,5 @@
-@import './fonts';
-@import './variables';
+@import 'fonts';
+@import 'variables';
 
 *{
    margin: 0;
@@ -23,4 +23,5 @@
    padding: 10px;
    background-color: $White;
    border-radius: 8px;
+   display: flex;
 }

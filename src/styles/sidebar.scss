@@ -1,0 +1,42 @@
+@import 'variables';
+
+.sidebar{
+   background-image: url('../assets/images/bg-sidebar-desktop.svg');
+   height: 568px;
+   width: 274px;
+   padding: 40px 30px;
+}
+.step{
+   &__wrapper{
+      display: flex;
+      margin-bottom: 25px;
+      align-items: center;
+      color: $White;
+      text-transform: uppercase;
+      cursor: pointer;
+   }
+   &__number{
+      border-radius: 50%;
+      border: 1px solid $White;
+      padding: 10px;
+      margin-right: 20px;
+      width: 40px;
+      text-align: center; 
+      font-weight: 700;
+   }
+   &__number.active{
+      color: $Marine-blue;
+      background-color: $Light-blue;
+   }
+   &__subtitle{
+      font-weight: 400;  
+      color: $Cool-gray;
+      font-size: 12px;
+      margin-bottom: 3px;
+   }
+   &__title{
+      font-size: 14px;
+   }
+
+}
+
