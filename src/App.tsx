@@ -1,7 +1,7 @@
-import {FC} from 'react'
-import Sidebar from './components/Sidebar';
+import { FC } from 'react';
+import Sidebar from './features/sidebar/Sidebar';
 
-const App:FC =()=> {
+const App: FC = () => {
   return (
     <div className="container">
       <div className="App">
@@ -9,6 +9,6 @@ const App:FC =()=> {
       </div>
     </div>
   );
-}
+};
 
 export default App;
