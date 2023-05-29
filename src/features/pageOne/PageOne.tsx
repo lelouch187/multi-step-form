@@ -1,8 +1,16 @@
-import { FC } from "react"
+import { FC } from 'react';
+import PageInfo from '../../components/PageInfo';
+import FormOne from './FormOne';
 
-const PageOne:FC = () => {
+const PageOne: FC = () => {
   return (
-    <section className="pageOne">PageOne</section>
-  )
-}
-export default PageOne
+    <section className="page-one">
+      <PageInfo
+        title="Personal info"
+        subtitle="Please provide your name, email address, and phone number"
+      />
+      <FormOne />
+    </section>
+  );
+};
+export default PageOne;
