@@ -1,13 +1,13 @@
 import { PayloadAction, createSlice } from '@reduxjs/toolkit';
 import { RootState } from '../../store';
 
-interface SideState {
+interface PageOneState {
   name: string;
   phone: number | null;
   email: string;
 }
 
-const initialState: SideState = {
+const initialState: PageOneState = {
   name: '',
   phone: null,
   email: '',
@@ -17,7 +17,7 @@ export const pageOneSlice = createSlice({
   name: 'pageOne',
   initialState,
   reducers: {
-    pageOneSave: (state, { payload }: PayloadAction<SideState>) => {
+    pageOneSave: (state, { payload }: PayloadAction<PageOneState>) => {
      return state = payload;
     },
   },

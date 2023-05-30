@@ -10,9 +10,14 @@ const App: FC = () => {
       <div className="App">
         <Sidebar />
         <main className="main">
+        <section className="page">
           <Routes>{router.map(route=>{
-            return <Route path={route.path} element={<route.element />} />
+            return <Route key={route.key}
+            path={route.path} 
+            element={<route.element />} 
+            />
           })}</Routes>
+          </section>
         </main>
       </div>
     </div>

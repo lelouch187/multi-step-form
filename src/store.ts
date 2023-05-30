@@ -1,11 +1,13 @@
 import { configureStore } from '@reduxjs/toolkit';
 import sideReducer from './features/sidebar/side-slice';
 import pageOneReducer from './features/pageOne/pageOne-slice';
+import pageTwoReducer from './features/pageTwo/pageTwo-slice';
 
 export const store = configureStore({
   reducer: {
     side: sideReducer,
-    pageOne:pageOneReducer
+    pageOne: pageOneReducer,
+    pageTwo: pageTwoReducer,
   },
 });
 

@@ -1,6 +1,7 @@
 @import 'fonts';
 @import 'variables';
 @import 'pageOne';
+@import 'pageTwo';
 @import 'sidebar';
 
 *{
@@ -30,6 +31,9 @@ input::-webkit-inner-spin-button {
    background-color: $White;
    border-radius: 10px;
    display: flex;
+}
+.main{
+   width: 600px;
 }
 .page{
    padding: 30px 60px 30px 80px;
