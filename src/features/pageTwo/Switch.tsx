@@ -9,7 +9,7 @@ const Switch: FC = () => {
     <div className="switch">
       <span className={checked ? 'switch__text' : 'switch__text active'}>Monthly</span>
       <input
-        onClick={() => dispatch(changeStatus(!checked))}
+        onChange={() => dispatch(changeStatus(!checked))}
         name="position"
         value="year"
         checked={checked}

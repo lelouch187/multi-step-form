@@ -1,11 +1,11 @@
 import React, { FC } from 'react';
 import StepItem from './StepItem';
 import { useAppSelector } from '../../hooks';
-import { selectChangeStep } from './side-slice';
+import { selectStep } from './side-slice';
 
 const Sidebar: FC = () => {
   const steps = ['your info', 'select plan', 'add-ons', 'summary'];
-  const currentStep = useAppSelector(selectChangeStep)
+  const currentStep = useAppSelector(selectStep)
 
   return (
     <aside className="sidebar">

@@ -3,7 +3,6 @@ import { useForm, SubmitHandler } from 'react-hook-form';
 import { useAppDispatch, useAppSelector } from '../../hooks';
 import { pageOne, pageOneSave } from './pageOne-slice';
 import { changeStep } from '../sidebar/side-slice';
-import { useNavigate } from 'react-router';
 
 type Inputs = {
   name: string;
@@ -14,7 +13,6 @@ type Inputs = {
 const FormOne: FC = () => {
   const pageOneInfo = useAppSelector(pageOne)
   const dispatch = useAppDispatch()
-  const navigate = useNavigate();
   const {
     register,
     handleSubmit,
@@ -23,7 +21,6 @@ const FormOne: FC = () => {
   const onSubmit: SubmitHandler<Inputs> = (data) => {
     dispatch(pageOneSave(data))
     dispatch(changeStep(2))
-    navigate('/2')
   };
 
   return (
