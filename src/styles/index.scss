@@ -1,20 +1,26 @@
 @import 'fonts';
 @import 'variables';
+@import 'pageOne';
+@import 'sidebar';
 
 *{
    margin: 0;
    padding: 0;
    box-sizing: border-box;
-   font-family: "Ubuntu-Regular", sans-serif;
+   font-family: "Regular", sans-serif;
    font-size: 16px;
+}
+input::-webkit-inner-spin-button {
+   -webkit-appearance: none;
+   margin: 0;
 }
 #root{
    height: 100vh;
    background-color: $Magnolia;
-   padding-top: 5%;
+   padding-top: 10%;
 }
 .container{
-   max-width: 840px;
+   max-width: 970px;
    padding: 0px 15px;
    margin: 0 auto;
 }
@@ -26,16 +32,36 @@
    display: flex;
 }
 .page{
-   padding: 30px 100px;
+   padding: 30px 60px 30px 80px;
+   position: relative;
    &__title{
-      font-size: 24px;
-      font-family: "Ubuntu-Medium", sans-serif;
+      font-size: 30px;
+      font-family: "Medium", sans-serif;
       color: $Marine-blue;
-      font-weight: 700;
       margin-bottom: 10px;
+      letter-spacing: 1px;
    }
    &__subtitle{
-      font-size: 12px;
+      font-size: 16px;
+      color: $Cool-gray;
+      margin-bottom: 30px;
    }
 }
-
+.button-next{
+   display: inline-block;
+   width: 130px;
+   padding: 15px 20px;
+   border-radius: 8px;
+   font-family: 'Medium';
+   background-color: $Marine-blue;
+   border: none;
+   color: $Alabaster;
+   position: absolute;
+   right: 60px;
+   bottom: -100px;
+   transition: 0.2s all;
+   cursor: pointer;
+   &:hover{
+      opacity: 0.8;
+   }
+}

@@ -1,0 +1,32 @@
+@import 'variables';
+@import 'fonts';
+
+.form-page-one{
+   display: flex;
+   flex-direction: column;
+   .input{
+      width: 100%;
+      border-radius: 8px;
+      height: 50px;
+      padding: 15px;
+      font-family: 'Regular';
+      font-size: 18px;
+      border:1px solid $Cool-gray;
+      color: $Marine-blue;
+      &:focus{
+         outline: 1px solid $Marine-blue;
+      }
+      &__wrapper{
+         width: 100%;
+         margin-bottom: 20px;
+      }
+      &__message{
+         margin-bottom: 5px;
+      }
+      &__title{
+         color:$Marine-blue;
+         font-family: 'Medium';
+         font-size: 14px;
+      }
+   }
+}
