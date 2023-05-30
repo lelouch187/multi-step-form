@@ -34,7 +34,7 @@ const FormOne: FC = () => {
         <p>Email Address</p>
         <input
           type="email"
-          placeholder="e.g. Stephen King"
+          placeholder="e.g. Stephenking@lorem.com"
           {...register('email', {
             pattern: {
               value: /^\S+@\S+\.\S+$/,

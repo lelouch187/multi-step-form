@@ -8,8 +8,8 @@ interface IPageInfo {
 const PageInfo: FC<IPageInfo> = ({ title, subtitle }) => {
   return (
     <>
-      <h2 className="page-one__title">{title}</h2>
-      <p className="page-one__subtitle">{subtitle}</p>
+      <h2 className="page__title">{title}</h2>
+      <p className="page__subtitle">{subtitle}</p>
     </>
   );
 };

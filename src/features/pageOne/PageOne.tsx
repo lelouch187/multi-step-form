@@ -4,7 +4,7 @@ import FormOne from './FormOne';
 
 const PageOne: FC = () => {
   return (
-    <section className="page-one">
+    <section className="page">
       <PageInfo
         title="Personal info"
         subtitle="Please provide your name, email address, and phone number"
