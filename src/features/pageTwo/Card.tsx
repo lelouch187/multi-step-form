@@ -1,6 +1,6 @@
-import React, { FC, SVGProps } from 'react';
+import React, { FC } from 'react';
 import { useAppDispatch, useAppSelector } from '../../hooks';
-import { activeCard, changeActiveCard } from './pageTwo-slice';
+import { changeActiveCard, pageTwo } from './pageTwo-slice';
 
 interface ICard {
   img: string;
@@ -9,19 +9,19 @@ interface ICard {
 }
 
 const Card: FC<ICard> = ({ img, title, cost }) => {
-  const status = useAppSelector(activeCard);
+  const page = useAppSelector(pageTwo);
   const dispatch = useAppDispatch();
 
   return (
     <div
       onClick={() => dispatch(changeActiveCard(cost))}
-      className={status === cost ? 'Cards__item active' : 'Cards__item'}>
+      className={page.activeCard === cost ? 'Cards__item active' : 'Cards__item'}>
       <div className="Cards__wrapper--img">
         <img src={img} alt="img1" />
       </div>
       <h3 className="Cards__title">{title}</h3>
-      <p className="Cards__cost">{status === 0 ? `$${cost}/mo` : `$${cost}0/yr`}</p>
-      {status === 0 ? <p className="Cards__discount">2 months free</p> : null}
+      <p className="Cards__cost">{page.checkedStatus === false ? `$${cost}/mo` : `$${cost}0/yr`}</p>
+      {page.checkedStatus === true ? <p className="Cards__discount">2 months free</p> : null}
     </div>
   );
 };
