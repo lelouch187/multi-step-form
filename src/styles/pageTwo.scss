@@ -1,0 +1,57 @@
+@import 'variables';
+@import 'fonts';
+@import 'switch';
+
+.Cards{
+   display: flex;
+   &__item{
+      border: 1px solid $Light-gray;
+      border-radius: 10px;
+      min-width: 30%;
+      margin-right: 20px;
+      padding: 15px;
+      justify-content: baseline;
+      cursor: pointer;
+      transition: 0.2s all;
+      &:last-child{
+         margin-right: 0px;
+      }
+      &.active{
+         border: 1px solid $Marine-blue;
+         background-color: $Alabaster;
+      }
+   }
+   &__wrapper--img{
+      margin-bottom: 40px;
+   }
+   &__title{
+      color: $Marine-blue;
+      margin-bottom: 5px;
+   }
+   &__cost{
+      color: $Cool-gray;
+      font-size: 14px;
+      margin-bottom: 3px;
+   }
+   &__discount{
+      color: $Marine-blue;
+      font-size: 12px;
+   }
+}
+.switch{
+   display: flex;
+   margin-top: 40px;
+   background-color: $Alabaster;
+   border-radius: 8px;
+   height: 50px;
+   align-items: center;
+   justify-content: center;
+   &__text{
+      font-family: 'Medium';
+      margin: 0px 20px;
+      color: $Light-gray;
+      &.active{
+         color: $Marine-blue;
+      }
+   }
+}

@@ -23,6 +23,6 @@ export const sideSlice = createSlice({
 
 export const { changeStep } = sideSlice.actions
 
-export const selectChangeStep = (state: RootState) => state.side.currentStep
+export const selectStep = (state: RootState) => state.side.currentStep
 
 export default sideSlice.reducer

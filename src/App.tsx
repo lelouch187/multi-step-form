@@ -1,18 +1,22 @@
 import { FC } from 'react';
 import Sidebar from './features/sidebar/Sidebar';
 import PageOne from './features/pageOne/PageOne';
-import { Route, Routes } from 'react-router-dom';
-import { router } from './router';
+import { useAppSelector } from './hooks';
+import { selectStep } from './features/sidebar/side-slice';
+import PageTwo from './features/pageTwo/PageTwo';
+
 
 const App: FC = () => {
+  const step = useAppSelector(selectStep)
   return (
     <div className="container">
       <div className="App">
         <Sidebar />
         <main className="main">
-          <Routes>{router.map(route=>{
-            return <Route path={route.path} element={<route.element />} />
-          })}</Routes>
+        <section className="page">
+            {step===1?<PageOne/>:
+            step===2?<PageTwo/>:null}
+          </section>
         </main>
       </div>
     </div>

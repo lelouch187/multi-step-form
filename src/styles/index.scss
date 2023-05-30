@@ -1,6 +1,7 @@
 @import 'fonts';
 @import 'variables';
 @import 'pageOne';
+@import 'pageTwo';
 @import 'sidebar';
 
 *{
@@ -31,7 +32,11 @@ input::-webkit-inner-spin-button {
    border-radius: 10px;
    display: flex;
 }
+.main{
+   width: 600px;
+}
 .page{
+   height: 100%;
    padding: 30px 60px 30px 80px;
    position: relative;
    &__title{
@@ -58,10 +63,25 @@ input::-webkit-inner-spin-button {
    color: $Alabaster;
    position: absolute;
    right: 60px;
-   bottom: -100px;
+   bottom: 20px;
    transition: 0.2s all;
    cursor: pointer;
    &:hover{
       opacity: 0.8;
    }
+}
+.button-prev{
+   display: inline-block;
+   width: 130px;
+   padding: 15px 20px;
+   border-radius: 8px;
+   font-family: 'Medium';
+   background: none;
+   border: none;
+   color: $Cool-gray;
+   position: absolute;
+   left: 60px;
+   bottom: 20px;
+   transition: 0.2s all;
+   cursor: pointer;
 }
