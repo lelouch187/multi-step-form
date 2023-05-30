@@ -35,7 +35,7 @@ const FormOne: FC = () => {
           {errors.name && <span className='input__error'>{errors.name.message}</span>}
         </p>
         <input defaultValue={pageOneInfo.name}
-        className='input'
+        className={errors.name?'input warning':'input'}
           type="text"
           placeholder="e.g. Stephen King"
           {...register('name', { required: 'This field is required' })}
@@ -47,17 +47,17 @@ const FormOne: FC = () => {
           {errors.email && <span className='input__error'>{errors.email.message}</span>}
           </p>
         <input defaultValue={pageOneInfo.email}
-        className='input'
+        className={errors.email?'input warning':'input'}
           type="email"
           placeholder="e.g. Stephenking@lorem.com"
           {...register('email', {
+            required: 'This field is required',
             pattern: {
               value: /^\S+@\S+\.\S+$/,
               message: 'email specified incorrectly',
             },
           })}
         />
-        {errors.email && <span className='input__error'>{errors.email.message}</span>}
       </label>
       <label className='input__wrapper'>
         <p className='input__message'>
@@ -65,7 +65,7 @@ const FormOne: FC = () => {
           {errors.phone && <span className='input__error'>{errors.phone.message}</span>}
         </p>
         <input defaultValue={pageOneInfo.phone||''}
-        className='input'
+        className={errors.phone?'input warning':'input'}
           type="phone"
           placeholder="e.g. +1 234 567 890"
           {...register('phone', { required: 'This field is required' })}
