@@ -3,6 +3,7 @@
 @import 'pageOne';
 @import 'pageTwo';
 @import 'sidebar';
+@import 'pageThree';
 
 *{
    margin: 0;
@@ -18,7 +19,7 @@ input::-webkit-inner-spin-button {
 #root{
    height: 100vh;
    background-color: $Magnolia;
-   padding-top: 5%;
+   padding-top: 15vh;
 }
 .container{
    max-width: 970px;
@@ -37,7 +38,7 @@ input::-webkit-inner-spin-button {
 }
 .page{
    height: 100%;
-   padding: 30px 60px 30px 80px;
+   padding: 40px 60px 30px 80px;
    position: relative;
    &__title{
       font-size: 30px;

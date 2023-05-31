@@ -1,9 +1,9 @@
 import React, { FC } from 'react';
 import { useAppDispatch, useAppSelector } from '../../hooks';
-import { changeStatus, checkedStatus } from './pageTwo-slice';
+import { changeStatus, checkedStatusSelect } from './pageTwo-slice';
 
 const Switch: FC = () => {
-  const checked = useAppSelector(checkedStatus);
+  const checked = useAppSelector(checkedStatusSelect);
   const dispatch = useAppDispatch();
   return (
     <div className="switch">

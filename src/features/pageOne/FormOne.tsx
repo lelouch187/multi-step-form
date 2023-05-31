@@ -1,7 +1,7 @@
 import { FC } from 'react';
 import { useForm, SubmitHandler } from 'react-hook-form';
 import { useAppDispatch, useAppSelector } from '../../hooks';
-import { pageOne, pageOneSave } from './pageOne-slice';
+import { pageOneSelect, pageOneSave } from './pageOne-slice';
 import { changeStep } from '../sidebar/side-slice';
 
 type Inputs = {
@@ -11,7 +11,7 @@ type Inputs = {
 };
 
 const FormOne: FC = () => {
-  const pageOneInfo = useAppSelector(pageOne)
+  const pageOneInfo = useAppSelector(pageOneSelect)
   const dispatch = useAppDispatch()
   const {
     register,

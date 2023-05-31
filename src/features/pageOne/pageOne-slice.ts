@@ -25,6 +25,6 @@ export const pageOneSlice = createSlice({
 
 export const { pageOneSave } = pageOneSlice.actions;
 
-export const pageOne = (state: RootState) => state.pageOne
+export const pageOneSelect = (state: RootState) => state.pageOne
 
 export default pageOneSlice.reducer;

@@ -26,8 +26,8 @@ export const pageTwoSlice = createSlice({
 
 export const { changeActiveCard, changeStatus } = pageTwoSlice.actions;
 
-export const pageTwo = (state: RootState) => state.pageTwo;
-export const activeCard = (state: RootState) => state.pageTwo.activeCard;
-export const checkedStatus = (state: RootState) => state.pageTwo.checkedStatus;
+export const pageTwoSelect = (state: RootState) => state.pageTwo;
+export const activeCardSelect = (state: RootState) => state.pageTwo.activeCard;
+export const checkedStatusSelect = (state: RootState) => state.pageTwo.checkedStatus;
 
 export default pageTwoSlice.reducer;
