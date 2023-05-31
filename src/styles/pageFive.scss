@@ -1,0 +1,21 @@
+@import 'fonts';
+@import 'variables';
+
+.result{
+   display: flex;
+   align-items: center;
+   flex-direction: column;
+   margin-top: 130px;
+   &__title{
+      margin-top: 30px;
+      font-size: 30px;
+      font-family: "Bold", sans-serif;
+      color: $Marine-blue;
+   }
+   &__text{
+      margin-top: 20px;
+      line-height: 1.4;
+      color: $Cool-gray;
+      letter-spacing: 1.1;
+   }
+}

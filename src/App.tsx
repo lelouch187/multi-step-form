@@ -6,6 +6,7 @@ import { selectStep } from './features/sidebar/side-slice';
 import PageTwo from './features/pageTwo/PageTwo';
 import PageThree from './features/pageThree/PageThree';
 import PageFour from './features/pageFour/PageFour';
+import PageFive from './features/pageFive/PageFive';
 
 
 const App: FC = () => {
@@ -19,7 +20,7 @@ const App: FC = () => {
             {step===1?<PageOne/>:
             step===2?<PageTwo/>:
             step===3?<PageThree />:
-            step===4? <PageFour />:null}
+            step===4? <PageFour />:<PageFive />}
           </section>
         </main>
       </div>
