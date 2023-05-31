@@ -36,7 +36,8 @@ export const pageThreeSlice = createSlice({
 
 export const { chengeCheck } = pageThreeSlice.actions;
 
-export const pickItemsSelect = (state: RootState) => state.pageThree.items;
+export const selectActiveItems = (state: RootState) => state.pageThree.items.filter(item=>item.checked===true);
+export const selectPickItems = (state: RootState) => state.pageThree.items;
 
 
 export default pageThreeSlice.reducer;

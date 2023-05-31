@@ -1,6 +1,6 @@
 import React, { FC } from 'react';
 import { useAppDispatch, useAppSelector } from '../../hooks';
-import { changeActiveCard, pageTwoSelect } from './pageTwo-slice';
+import { changeActiveCard, selectPageTwo } from './pageTwo-slice';
 
 interface ICard {
   img: string;
@@ -9,7 +9,7 @@ interface ICard {
 }
 
 const Card: FC<ICard> = ({ img, title, cost }) => {
-  const page = useAppSelector(pageTwoSelect);
+  const page = useAppSelector(selectPageTwo);
   const dispatch = useAppDispatch();
 
   return (

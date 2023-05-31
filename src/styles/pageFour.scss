@@ -1,0 +1,61 @@
+@import 'variables';
+@import 'fonts';
+
+.pay{
+   &__info{
+      display: flex;
+      flex-direction: column;
+      background-color: $Alabaster;
+      padding: 20px;
+      border-radius: 8px;
+   }
+   &__plan{
+      display: flex;
+      justify-content: space-between;
+      border-bottom: 1px solid $Light-gray;
+      padding-bottom: 20px;
+      align-items: center;
+      &__title{
+         color: $Marine-blue;
+         margin-bottom: 10px;
+      }
+      &__change{
+         border: none;
+         background: none;
+         color: $Cool-gray;
+         font-family: "Medium", sans-serif;
+         text-decoration: underline;
+         cursor: pointer;
+      }
+      &__cost{
+         font-family: "Bold", sans-serif;
+         color: $Marine-blue;
+      }
+   }
+}
+.active--pick{
+   &__wrapper{
+      display: flex;
+      justify-content: space-between;
+      margin-top: 20px;
+   }
+   &__title{
+      color: $Cool-gray;
+   }
+   &__cost{
+      color: $Marine-blue;
+   }
+}
+.total{
+   display: flex;
+   justify-content: space-between;
+   padding: 20px;
+   &__title{
+      color: $Cool-gray;
+   }
+   &__cost{
+      color: $Purplish-blue;
+      font-family: "Bold", sans-serif;
+      font-size: 18px;
+   }
+}

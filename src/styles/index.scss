@@ -4,6 +4,7 @@
 @import 'pageTwo';
 @import 'sidebar';
 @import 'pageThree';
+@import 'pageFour';
 
 *{
    margin: 0;
@@ -70,6 +71,9 @@ input::-webkit-inner-spin-button {
    &:hover{
       opacity: 0.8;
    }
+}
+.button-confirm{
+   background-color: $Purplish-blue;
 }
 .button-prev{
    display: inline-block;

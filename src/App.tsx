@@ -5,6 +5,7 @@ import { useAppSelector } from './hooks';
 import { selectStep } from './features/sidebar/side-slice';
 import PageTwo from './features/pageTwo/PageTwo';
 import PageThree from './features/pageThree/PageThree';
+import PageFour from './features/pageFour/PageFour';
 
 
 const App: FC = () => {
@@ -16,7 +17,9 @@ const App: FC = () => {
         <main className="main">
         <section className="page">
             {step===1?<PageOne/>:
-            step===2?<PageTwo/>:<PageThree />}
+            step===2?<PageTwo/>:
+            step===3?<PageThree />:
+            step===4? <PageFour />:null}
           </section>
         </main>
       </div>

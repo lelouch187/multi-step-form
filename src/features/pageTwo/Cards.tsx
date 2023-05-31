@@ -1,25 +1,20 @@
 import React, { FC } from 'react'
 import Card from './Card'
-import arcade from '../../assets/images/icon-arcade.svg'
-import advanced from '../../assets/images/icon-advanced.svg'
-import pro from '../../assets/images/icon-pro.svg'
+import { useAppSelector } from '../../hooks'
+import { selectCards } from './pageTwo-slice'
+
 
 
 const Cards:FC = () => {
+  const cards = useAppSelector(selectCards)
   return (
     <div className='Cards'>
-      <Card cost={9}
-      title='Arcade'
-      key={1}
-      img={arcade as unknown as string}/>
-      <Card cost={12}
-      title='Advanced'
-      key={2}
-      img={advanced as unknown as string} />
-      <Card cost={15}
-      title='Pro'
-      key={3}
-      img={pro as unknown as string}/>
+      {cards.map(card=>{
+        return <Card cost={card.cost}
+        img={card.img}
+        title={card.title}
+        />
+      })}
     </div>
   )
 }

@@ -1,12 +1,12 @@
 import React, { FC } from 'react';
 import { useAppSelector } from '../../hooks';
-import { pickItemsSelect } from './pageThree-slice';
+import { selectPickItems } from './pageThree-slice';
 import PickItem from './PickItem';
-import { checkedStatusSelect } from '../pageTwo/pageTwo-slice';
+import { selectCheckedStatus } from '../pageTwo/pageTwo-slice';
 
 const PickItems: FC = () => {
-  const items = useAppSelector(pickItemsSelect);
-  const checkedStatus = useAppSelector(checkedStatusSelect);
+  const items = useAppSelector(selectPickItems);
+  const checkedStatus = useAppSelector(selectCheckedStatus);
   return (
     <div className="pick__wrapper">
       {items.map((item, index) => {

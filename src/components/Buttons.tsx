@@ -2,7 +2,11 @@ import React, { FC } from 'react';
 import { useAppDispatch, useAppSelector } from '../hooks';
 import { changeStep, selectStep } from '../features/sidebar/side-slice';
 
-const Buttons: FC = () => {
+interface IButtonsProps {
+  final?:boolean;
+}
+
+const Buttons: FC<IButtonsProps> = ({final}) => {
   const currentStep = useAppSelector(selectStep);
   const dispatch = useAppDispatch();
   return (
@@ -15,8 +19,8 @@ const Buttons: FC = () => {
       />
       <input
         onClick={() => dispatch(changeStep(currentStep + 1))}
-        className="button-next"
-        value="Next Step"
+        className={final?"button-next button-confirm":"button-next"}
+        value={final?"Confirm":"Next Step"}
         type="button"
       />
     </>
